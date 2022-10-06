@@ -6,7 +6,7 @@ pipeline {
         PATH = "opt/maven3/bin:$PATH"
     }
     stages {
-        stages ("Git Checkout") {
+        stage ("Git Checkout") {
             steps {
                 git credentialsid:  'javahome2', url :  'https://github.com/GARAGANAGARAJU/spring-petclinic.git'
             }
