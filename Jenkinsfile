@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage ("Git Checkout") {
             steps {
-                git credentialsid:  'javahome2', url :  'https://github.com/GARAGANAGARAJU/spring-petclinic.git'
+               git branch: 'main', url: 'https://github.com/GARAGANAGARAJU/spring-petclinic.git'
             }
         }
         stage ("Maven Build") {
