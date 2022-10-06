@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'windows'
+    }
     environment {
         PATH = "opt/maven3/bin:$PATH"
     }
