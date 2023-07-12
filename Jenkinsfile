@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'windows'
+        label 'dev'
     }
     environment {
         PATH = "opt/maven3/bin:$PATH"
