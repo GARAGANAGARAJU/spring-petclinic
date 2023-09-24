@@ -14,7 +14,7 @@ pipeline {
         stage ("Maven Build") {
             steps {
                 sh "mvn clean package"
-                sh "mv target/*.war target/myweb.war"
+                sh "mv target/*.jar target/spring-petclinic-2.6.0-SNAPSHOT.jar"
             }
         }
         stage ("deploy-dev") {
