@@ -16,7 +16,7 @@ pipeline {
                 sh "mvn clean package"
             }
         }
-   stage ("deploy-devv") {
+   stage ("deploy-dev") {
             steps {
                 sshagent(['ubuntu']) {
                     sh """ 
