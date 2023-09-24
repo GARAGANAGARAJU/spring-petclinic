@@ -3,7 +3,7 @@ pipeline {
         label 'dev'
     }
     environment {
-        PATH = "opt/maven3/bin:$PATH"
+        PATH = "/opt/apache-maven-3.9.4/bin:$PATH"
     }
     stages {
         stage ("Git Checkout") {
