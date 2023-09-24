@@ -20,9 +20,9 @@ pipeline {
             steps {
                 sshagent(['ubuntu']) {
                     sh """ 
-                        scp -o stricthostkeychecking=no -v target/spring-petclinic-2.6.0-SNAPSHOT.jar ubuntu@3.16.68.70:/home/ubuntu/apache-tomcat-10.1.13/webapps/
-                        ssh ubuntu@3.16.68.70 /home/ubuntu/apache-tomcat-10.1.13/bin/shutdown.sh
-                        ssh ubuntu@3.16.68.70 /home/ubuntu/apache-tomcat-10.1.13/bin/startup.sh
+                        scp -o stricthostkeychecking=no -v target/spring-petclinic-2.6.0-SNAPSHOT.jar ubuntu@172.31.7.242:/home/ubuntu/apache-tomcat-10.1.13/webapps/
+                        ssh ubuntu@172.31.7.242 /home/ubuntu/apache-tomcat-10.1.13/bin/shutdown.sh
+                        ssh ubuntu@172.31.7.242 /home/ubuntu/apache-tomcat-10.1.13/bin/startup.sh
                        """
                 }
             }
