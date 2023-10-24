@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_spring_petclinic_1698127095647-pr-trigger-input-set
+  identifier: Build_spring_petclinic_1698127095647prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: test_build
+  pipeline:
+    identifier: Build_spring_petclinic_1698127095647
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
