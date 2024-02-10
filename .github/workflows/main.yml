@@ -1,0 +1,27 @@
+name: Push Docker Image to Azure ACR
+
+on:
+  push:
+    branches:
+      - main  # Modify this according to your branch name
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Login to Azure Container Registry
+      uses: azure/docker-login@v1
+      with:
+        login-server: 1851p.azurecr.io
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+
+    - name: Build Docker image
+      run: docker build -t spring:latest .
+
+    - name: Push Docker image to Azure Container Registry
+      run: docker push 1851p.azurecr.io/spring:latest
